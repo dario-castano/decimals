@@ -52,3 +52,268 @@ clj꞉decimals.core꞉> 
 (decimal-to-binary 68.6875)
 "1000100.1011"
 clj꞉decimals.core꞉> 
+; Evaluating file: core.clj
+#'decimals.core/-main
+clj꞉decimals.core꞉> 
+(decimal-to-binary 0.999)
+; Execution error (OutOfMemoryError) at decimals.core/int-to-binary (core.clj:17).
+; Java heap space
+clj꞉decimals.core꞉> 
+#'decimals.core/fraction-to-binary
+clj꞉decimals.core꞉> 
+(decimal-to-binary 0.999)
+; nREPL Connection was closed
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in Terminal: pushd /home/dario/Documents/repos/clojure/decimals ; lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless ; popd
+; Using host:port 127.0.0.1:45239 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+(decimal-to-binary 0.999)
+clj꞉decimals.core꞉> 
+clj꞉decimals.core꞉> 
+nil
+
+; nREPL Connection was closed
+; Jack-in done.; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in Terminal: pushd /home/dario/Documents/repos/clojure/decimals ; lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless ; popd
+; Using host:port 127.0.0.1:44777 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉decimals.core꞉> 
+; Jack-in done.
+clj꞉decimals.core꞉> 
+(decimal-to-binary 0.999)
+; SPLIT->{:integer 1, :decimal 0.998}
+; N->0.999
+; SPLIT->{:integer 1, :decimal 0.996}
+; N->0.998
+; SPLIT->{:integer 1, :decimal 0.992}
+; N->0.996
+; SPLIT->{:integer 1, :decimal 0.984}
+; N->0.992
+; SPLIT->{:integer 1, :decimal 0.968}
+; N->0.984
+; SPLIT->{:integer 1, :decimal 0.9359999999999999}
+; N->0.968
+; SPLIT->{:integer 1, :decimal 0.8719999999999999}
+; N->0.9359999999999999
+; SPLIT->{:integer 1, :decimal 0.7439999999999998}
+; N->0.8719999999999999
+; SPLIT->{:integer 1, :decimal 0.48799999999999955}
+; N->0.7439999999999998
+; SPLIT->{:integer 0, :decimal 0.9759999999999991}
+; N->0.48799999999999955
+; SPLIT->{:integer 1, :decimal 0.9519999999999982}
+; N->0.9759999999999991
+; SPLIT->{:integer 1, :decimal 0.9039999999999964}
+; N->0.9519999999999982
+; SPLIT->{:integer 1, :decimal 0.8079999999999927}
+; N->0.9039999999999964
+; SPLIT->{:integer 1, :decimal 0.6159999999999854}
+; N->0.8079999999999927
+; SPLIT->{:integer 1, :decimal 0.2319999999999709}
+; N->0.6159999999999854
+; SPLIT->{:integer 0, :decimal 0.4639999999999418}
+; N->0.2319999999999709
+; SPLIT->{:integer 0, :decimal 0.9279999999998836}
+; N->0.4639999999999418
+; SPLIT->{:integer 1, :decimal 0.8559999999997672}
+; N->0.9279999999998836
+; SPLIT->{:integer 1, :decimal 0.7119999999995343}
+; N->0.8559999999997672
+; SPLIT->{:integer 1, :decimal 0.4239999999990687}
+; N->0.7119999999995343
+; SPLIT->{:integer 0, :decimal 0.8479999999981374}
+; N->0.4239999999990687
+; SPLIT->{:integer 1, :decimal 0.6959999999962747}
+; N->0.8479999999981374
+; SPLIT->{:integer 1, :decimal 0.3919999999925494}
+; N->0.6959999999962747
+; SPLIT->{:integer 0, :decimal 0.7839999999850988}
+; N->0.3919999999925494
+; SPLIT->{:integer 1, :decimal 0.5679999999701977}
+; N->0.7839999999850988
+; SPLIT->{:integer 1, :decimal 0.13599999994039536}
+; N->0.5679999999701977
+; SPLIT->{:integer 0, :decimal 0.2719999998807907}
+; N->0.13599999994039536
+; SPLIT->{:integer 0, :decimal 0.5439999997615814}
+; N->0.2719999998807907
+; SPLIT->{:integer 1, :decimal 0.08799999952316284}
+; N->0.5439999997615814
+; SPLIT->{:integer 0, :decimal 0.17599999904632568}
+; N->0.08799999952316284
+; SPLIT->{:integer 0, :decimal 0.35199999809265137}
+; N->0.17599999904632568
+; SPLIT->{:integer 0, :decimal 0.7039999961853027}
+; N->0.35199999809265137
+; SPLIT->{:integer 1, :decimal 0.40799999237060547}
+; N->0.7039999961853027
+; SPLIT->{:integer 0, :decimal 0.8159999847412109}
+; N->0.40799999237060547
+; SPLIT->{:integer 1, :decimal 0.6319999694824219}
+; N->0.8159999847412109
+; SPLIT->{:integer 1, :decimal 0.26399993896484375}
+; N->0.6319999694824219
+; SPLIT->{:integer 0, :decimal 0.5279998779296875}
+; N->0.26399993896484375
+; SPLIT->{:integer 1, :decimal 0.055999755859375}
+; N->0.5279998779296875
+; SPLIT->{:integer 0, :decimal 0.11199951171875}
+; N->0.055999755859375
+; SPLIT->{:integer 0, :decimal 0.2239990234375}
+; N->0.11199951171875
+; SPLIT->{:integer 0, :decimal 0.447998046875}
+; N->0.2239990234375
+; SPLIT->{:integer 0, :decimal 0.89599609375}
+; N->0.447998046875
+; SPLIT->{:integer 1, :decimal 0.7919921875}
+; N->0.89599609375
+; SPLIT->{:integer 1, :decimal 0.583984375}
+; N->0.7919921875
+; SPLIT->{:integer 1, :decimal 0.16796875}
+; N->0.583984375
+; SPLIT->{:integer 0, :decimal 0.3359375}
+; N->0.16796875
+; SPLIT->{:integer 0, :decimal 0.671875}
+; N->0.3359375
+; SPLIT->{:integer 1, :decimal 0.34375}
+; N->0.671875
+; SPLIT->{:integer 0, :decimal 0.6875}
+; N->0.34375
+; SPLIT->{:integer 1, :decimal 0.375}
+; N->0.6875
+; SPLIT->{:integer 0, :decimal 0.75}
+; N->0.375
+; SPLIT->{:integer 1, :decimal 0.5}
+; N->0.75
+; SPLIT->{:integer 1, :decimal 0.0}
+; N->0.5
+"0.11111111101111100111011011001000101101000011100101011"
+clj꞉decimals.core꞉> 
+#'decimals.core/fraction-to-binary
+clj꞉decimals.core꞉> 
+(decimal-to-binary 0.999)
+; N->0.999
+; SPLIT->{:integer 1, :decimal 0.998}
+; N->0.998
+; SPLIT->{:integer 1, :decimal 0.996}
+; N->0.996
+; SPLIT->{:integer 1, :decimal 0.992}
+; N->0.992
+; SPLIT->{:integer 1, :decimal 0.984}
+; N->0.984
+; SPLIT->{:integer 1, :decimal 0.968}
+; N->0.968
+; SPLIT->{:integer 1, :decimal 0.9359999999999999}
+; N->0.9359999999999999
+; SPLIT->{:integer 1, :decimal 0.8719999999999999}
+; N->0.8719999999999999
+; SPLIT->{:integer 1, :decimal 0.7439999999999998}
+; N->0.7439999999999998
+; SPLIT->{:integer 1, :decimal 0.48799999999999955}
+; N->0.48799999999999955
+; SPLIT->{:integer 0, :decimal 0.9759999999999991}
+; N->0.9759999999999991
+; SPLIT->{:integer 1, :decimal 0.9519999999999982}
+; N->0.9519999999999982
+; SPLIT->{:integer 1, :decimal 0.9039999999999964}
+; N->0.9039999999999964
+; SPLIT->{:integer 1, :decimal 0.8079999999999927}
+; N->0.8079999999999927
+; SPLIT->{:integer 1, :decimal 0.6159999999999854}
+; N->0.6159999999999854
+; SPLIT->{:integer 1, :decimal 0.2319999999999709}
+; N->0.2319999999999709
+; SPLIT->{:integer 0, :decimal 0.4639999999999418}
+; N->0.4639999999999418
+; SPLIT->{:integer 0, :decimal 0.9279999999998836}
+; N->0.9279999999998836
+; SPLIT->{:integer 1, :decimal 0.8559999999997672}
+; N->0.8559999999997672
+; SPLIT->{:integer 1, :decimal 0.7119999999995343}
+; N->0.7119999999995343
+; SPLIT->{:integer 1, :decimal 0.4239999999990687}
+; N->0.4239999999990687
+; SPLIT->{:integer 0, :decimal 0.8479999999981374}
+; N->0.8479999999981374
+; SPLIT->{:integer 1, :decimal 0.6959999999962747}
+; N->0.6959999999962747
+; SPLIT->{:integer 1, :decimal 0.3919999999925494}
+; N->0.3919999999925494
+; SPLIT->{:integer 0, :decimal 0.7839999999850988}
+; N->0.7839999999850988
+; SPLIT->{:integer 1, :decimal 0.5679999999701977}
+; N->0.5679999999701977
+; SPLIT->{:integer 1, :decimal 0.13599999994039536}
+; N->0.13599999994039536
+; SPLIT->{:integer 0, :decimal 0.2719999998807907}
+; N->0.2719999998807907
+; SPLIT->{:integer 0, :decimal 0.5439999997615814}
+; N->0.5439999997615814
+; SPLIT->{:integer 1, :decimal 0.08799999952316284}
+; N->0.08799999952316284
+; SPLIT->{:integer 0, :decimal 0.17599999904632568}
+; N->0.17599999904632568
+; SPLIT->{:integer 0, :decimal 0.35199999809265137}
+; N->0.35199999809265137
+; SPLIT->{:integer 0, :decimal 0.7039999961853027}
+; N->0.7039999961853027
+; SPLIT->{:integer 1, :decimal 0.40799999237060547}
+; N->0.40799999237060547
+; SPLIT->{:integer 0, :decimal 0.8159999847412109}
+; N->0.8159999847412109
+; SPLIT->{:integer 1, :decimal 0.6319999694824219}
+; N->0.6319999694824219
+; SPLIT->{:integer 1, :decimal 0.26399993896484375}
+; N->0.26399993896484375
+; SPLIT->{:integer 0, :decimal 0.5279998779296875}
+; N->0.5279998779296875
+; SPLIT->{:integer 1, :decimal 0.055999755859375}
+; N->0.055999755859375
+; SPLIT->{:integer 0, :decimal 0.11199951171875}
+; N->0.11199951171875
+; SPLIT->{:integer 0, :decimal 0.2239990234375}
+; N->0.2239990234375
+; SPLIT->{:integer 0, :decimal 0.447998046875}
+; N->0.447998046875
+; SPLIT->{:integer 0, :decimal 0.89599609375}
+; N->0.89599609375
+; SPLIT->{:integer 1, :decimal 0.7919921875}
+; N->0.7919921875
+; SPLIT->{:integer 1, :decimal 0.583984375}
+; N->0.583984375
+; SPLIT->{:integer 1, :decimal 0.16796875}
+; N->0.16796875
+; SPLIT->{:integer 0, :decimal 0.3359375}
+; N->0.3359375
+; SPLIT->{:integer 0, :decimal 0.671875}
+; N->0.671875
+; SPLIT->{:integer 1, :decimal 0.34375}
+; N->0.34375
+; SPLIT->{:integer 0, :decimal 0.6875}
+; N->0.6875
+; SPLIT->{:integer 1, :decimal 0.375}
+; N->0.375
+; SPLIT->{:integer 0, :decimal 0.75}
+; N->0.75
+; SPLIT->{:integer 1, :decimal 0.5}
+; N->0.5
+; SPLIT->{:integer 1, :decimal 0.0}
+"0.11111111101111100111011011001000101101000011100101011"
+clj꞉decimals.core꞉> 
+#'decimals.core/-main
+clj꞉decimals.core꞉> 

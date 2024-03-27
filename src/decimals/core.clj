@@ -12,7 +12,7 @@
 (defn int-to-binary
   "Converts an integer value to a binary one"
   [n binarr]
-  (if (= n 1)
+  (if (or (= n 1) (= n 0))
     (cons n binarr)
     (recur (quot n 2) (cons (rem n 2) binarr))))
 
