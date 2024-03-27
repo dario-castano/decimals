@@ -39,7 +39,7 @@
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]
-  (println (str "Nivel de bateria: " (decimal-to-binary 3.752)))
-  (println (str "Nivel de bateria: " (decimal-to-binary 12.488)))
-  (println (str "Nivel de bateria: " (decimal-to-binary 114.915)))
+  (println (str "Nivel de bateria 1: " (decimal-to-binary 3.752)))
+  (println (str "Nivel de bateria 2: " (decimal-to-binary 12.488)))
+  (println (str "Nivel de bateria 3: " (decimal-to-binary 114.915)))
   )
