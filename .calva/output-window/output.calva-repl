@@ -317,3 +317,314 @@ clj꞉decimals.core꞉> 
 clj꞉decimals.core꞉> 
 #'decimals.core/-main
 clj꞉decimals.core꞉> 
+#'decimals.core/split-decimal
+clj꞉decimals.core꞉> 
+(split-decimal 3.752)
+{:integer 3, :decimal 0.7519999999999998}
+clj꞉decimals.core꞉> 
+; Jacking in...
+; Connecting using "Leiningen" project type.
+; You can make Calva auto-select this.
+;   - See https://calva.io/connect-sequences/
+; 
+
+; Starting Jack-in Terminal: pushd /home/dario/Documents/repos/clojure/decimals ; lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless ; popd
+; nREPL Connection was closed
+; Using host:port 127.0.0.1:35859 ...
+; Hooking up nREPL sessions ...
+; Connected session: clj
+; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
+nil
+clj꞉decimals.core꞉> 
+; Jack-in done.
+clj꞉decimals.core꞉> 
+#'decimals.binaries/split-binary
+clj꞉decimals.binaries꞉> 
+(split-binary "1101010.11001")
+; Execution error (ClassCastException) at decimals.binaries/split-binary (form-init8282825091467793111.clj:44).
+; class java.lang.String cannot be cast to class java.util.regex.Pattern (java.lang.String and java.util.regex.Pattern are in module java.base of loader 'bootstrap')
+clj꞉decimals.binaries꞉> 
+(str/split "1101010.101" ".")
+; Execution error (ClassCastException) at decimals.binaries/eval8054 (form-init8282825091467793111.clj:347).
+; class java.lang.String cannot be cast to class java.util.regex.Pattern (java.lang.String and java.util.regex.Pattern are in module java.base of loader 'bootstrap')
+clj꞉decimals.binaries꞉> 
+#'decimals.binaries/split-binary
+clj꞉decimals.binaries꞉> 
+(str/split "1101010.101" ".")
+; Execution error (ClassCastException) at decimals.binaries/eval8057 (form-init8282825091467793111.clj:353).
+; class java.lang.String cannot be cast to class java.util.regex.Pattern (java.lang.String and java.util.regex.Pattern are in module java.base of loader 'bootstrap')
+clj꞉decimals.binaries꞉> 
+{:integer nil, :decimal nil}
+(split-binary "1101010.11001")
+clj꞉decimals.binaries꞉> 
+#'decimals.binaries/split-binary
+clj꞉decimals.binaries꞉> 
+(split-binary "1101010.11001")
+{:integer "1101010", :decimal "11001"}
+clj꞉decimals.binaries꞉> 
+(rem 16 4)
+0
+clj꞉decimals.binaries꞉> 
+(rem 13 4)
+1
+clj꞉decimals.binaries꞉> 
+(rem 2 4)
+2
+clj꞉decimals.binaries꞉> 
+(rem 14 4)
+2
+clj꞉decimals.binaries꞉> 
+#'decimals.binaries/extend-left
+clj꞉decimals.binaries꞉> 
+(extend-left "10001")
+#'decimals.binaries/extend-left
+clj꞉decimals.binaries꞉> 
+
+((0) \1 \0 \0 \0 \1)
+clj꞉decimals.binaries꞉> 
+(extend-left "10001")
+(("0") \1 \0 \0 \0 \1)
+clj꞉decimals.binaries꞉> 
+#'decimals.binaries/split-binary
+clj꞉decimals.binaries꞉> 
+(extend-left "10001")
+(("0") \1 \0 \0 \0 \1)
+clj꞉decimals.binaries꞉> 
+#'decimals.binaries/extend-left
+clj꞉decimals.binaries꞉> 
+(extend-left "10001")
+("10001" "0")
+clj꞉decimals.binaries꞉> 
+(list "199191")
+("199191")
+clj꞉decimals.binaries꞉> 
+(flatten (extend-left "10001"))
+("10001" "0")
+clj꞉decimals.binaries꞉> 
+#'decimals.binaries/extend-left
+clj꞉decimals.binaries꞉> 
+(extend-left "10001")
+((\1 \0 \0 \0 \1) "0")
+clj꞉decimals.binaries꞉> 
+#'decimals.binaries/extend-left
+clj꞉decimals.binaries꞉> 
+(extend-left "10001")
+(("0") \1 \0 \0 \0 \1)
+clj꞉decimals.binaries꞉> 
+(flatten '(("0") \1 \0 \0 \0 \1))
+("0" \1 \0 \0 \0 \1)
+clj꞉decimals.binaries꞉> 
+#'decimals.binaries/extend-left
+clj꞉decimals.binaries꞉> 
+(extend-left "10001")
+(("0") \1 \0 \0 \0 \1)
+clj꞉decimals.binaries꞉> 
+#'decimals.binaries/extend-left
+clj꞉decimals.binaries꞉> 
+(extend-left "10001")
+"((\"0\") \\1 \\0 \\0 \\0 \\1)"
+clj꞉decimals.binaries꞉> 
+#'decimals.binaries/extend-left
+clj꞉decimals.binaries꞉> 
+(extend-left "10001")
+((\0) \1 \0 \0 \0 \1)
+clj꞉decimals.binaries꞉> 
+#'decimals.binaries/extend-left
+clj꞉decimals.binaries꞉> 
+(extend-left "10001")
+(\0 \1 \0 \0 \0 \1)
+clj꞉decimals.binaries꞉> 
+(rem 5 4)
+1
+clj꞉decimals.binaries꞉> 
+(rem 8 4)
+0
+clj꞉decimals.binaries꞉> 
+(rem 5 8)
+5
+clj꞉decimals.binaries꞉> 
+(mod 5 4)
+1
+clj꞉decimals.binaries꞉> 
+(mod 6 4)
+2
+clj꞉decimals.binaries꞉> 
+(mod 7 4)
+3
+clj꞉decimals.binaries꞉> 
+(mod 8 4)
+0
+clj꞉decimals.binaries꞉> 
+#'decimals.binaries/extend-left
+clj꞉decimals.binaries꞉> 
+(extend-left "10001")
+(\0 \0 \0 \1 \0 \0 \0 \1)
+clj꞉decimals.binaries꞉> 
+#'decimals.binaries/extend-right
+clj꞉decimals.binaries꞉> 
+(extend-right "10001")
+; Execution error (ClassCastException) at decimals.binaries/extend-right (form-init8282825091467793111.clj:61).
+; class java.lang.String cannot be cast to class clojure.lang.IPersistentCollection (java.lang.String is in module java.base of loader 'bootstrap'; clojure.lang.IPersistentCollection is in unnamed module of loader 'app')
+clj꞉decimals.binaries꞉> 
+(def binary-str "10001")
+#'decimals.binaries/binary-str
+clj꞉decimals.binaries꞉> 
+(conj binary-str \0)
+; Execution error (ClassCastException) at decimals.binaries/eval8148 (form-init8282825091467793111.clj:472).
+; class java.lang.String cannot be cast to class clojure.lang.IPersistentCollection (java.lang.String is in module java.base of loader 'bootstrap'; clojure.lang.IPersistentCollection is in unnamed module of loader 'app')
+clj꞉decimals.binaries꞉> 
+binary-str
+"10001"
+clj꞉decimals.binaries꞉> 
+(list binary-str)
+("10001")
+clj꞉decimals.binaries꞉> 
+(seq binary-str)
+(\1 \0 \0 \0 \1)
+clj꞉decimals.binaries꞉> 
+#'decimals.binaries/extend-right
+clj꞉decimals.binaries꞉> 
+(extend-right "10001")
+(\0 \0 \0 \1 \0 \0 \0 \1)
+clj꞉decimals.binaries꞉> 
+#'decimals.binaries/extend-right
+clj꞉decimals.binaries꞉> 
+(extend-right "10001")
+(\0 \0 \0 "10001")
+clj꞉decimals.binaries꞉> 
+#'decimals.binaries/extend-right
+clj꞉decimals.binaries꞉> 
+(extend-right "10001")
+("10001" \0 \0 \0)
+clj꞉decimals.binaries꞉> 
+(str/join binary-str "0")
+"0"
+clj꞉decimals.binaries꞉> 
+(str/join "" (flatten binary-str \0))
+; Execution error (ArityException) at decimals.binaries/eval8165 (form-init8282825091467793111.clj:503).
+; Wrong number of args (2) passed to: clojure.core/flatten
+clj꞉decimals.binaries꞉> 
+(str/join "" (flatten [binary-str "0"]))
+"100010"
+clj꞉decimals.binaries꞉> 
+(str/join "" (flatten ["0" binary-str]))
+"010001"
+clj꞉decimals.binaries꞉> 
+(extend-right "10001")
+("10001" \0 \0 \0)
+clj꞉decimals.binaries꞉> 
+(extend-left "10001")
+(\0 \0 \0 \1 \0 \0 \0 \1)
+clj꞉decimals.binaries꞉> 
+#'decimals.binaries/extend-left
+clj꞉decimals.binaries꞉> 
+(extend-left "10001")
+()
+clj꞉decimals.binaries꞉> 
+#'decimals.binaries/extend-right
+clj꞉decimals.binaries꞉> 
+(extend-right "10001")
+()
+clj꞉decimals.binaries꞉> 
+      (recur (str/join "" (flatten [(seq binary-str) \0]))))))
+[(seq binary-str) \0]
+[(\1 \0 \0 \0 \1) \0]
+clj꞉decimals.binaries꞉> 
+(flatten [(seq binary-str) \0])
+(\1 \0 \0 \0 \1 \0)
+clj꞉decimals.binaries꞉> 
+(flatten [(seq binary-str) \0])
+(str/join "" (flatten [(seq binary-str) \0]))
+"100010"
+clj꞉decimals.binaries꞉> 
+#'decimals.binaries/extend-right
+clj꞉decimals.binaries꞉> 
+; Evaluating file: binaries.clj
+#'decimals.binaries/extend-right
+clj꞉decimals.binaries꞉> 
+(extend-right "10001")
+()
+clj꞉decimals.binaries꞉> 
+#'decimals.binaries/extend-right
+clj꞉decimals.binaries꞉> 
+(extend-right "10001")
+"10001000"
+clj꞉decimals.binaries꞉> 
+#'decimals.binaries/extend-left
+clj꞉decimals.binaries꞉> 
+(extend-left "10001")
+"00010001"
+clj꞉decimals.binaries꞉> 
+(seq "0100")
+(\0 \1 \0 \0)
+clj꞉decimals.binar
+; Syntax error (ClassNotFoundException) compiling at (.calva/output-window/output.calva-repl:1:8111).
+; clj꞉decimals.binar
+clj꞉decimals.binaries꞉> 
+
+(def word "0100")
+#'decimals.binaries/word
+clj꞉decimals.binaries꞉> 
+(map int (seq word))
+(48 49 48 48)
+clj꞉decimals.binaries꞉> 
+(map Integer/parseUnsignedInt (seq word))
+; Syntax error compiling at (.calva/output-window/output.calva-repl:571:1).
+; Unable to find static field: parseUnsignedInt in class java.lang.Integer
+clj꞉decimals.binaries꞉> 
+(map Integer/parseInt (seq word))
+; Syntax error compiling at (.calva/output-window/output.calva-repl:575:1).
+; Unable to find static field: parseInt in class java.lang.Integer
+clj꞉decimals.binaries꞉> 
+(map read-string (seq word))
+; Error printing return value (ClassCastException) at clojure.core/read-string (core.clj:3806).
+; class java.lang.Character cannot be cast to class java.lang.String (java.lang.Character and java.lang.String are in module java.base of loader 'bootstrap')
+clj꞉decimals.binaries꞉> 
+(map #(. Integer/parseUnsignedInt %) (seq word))
+; Syntax error compiling at (.calva/output-window/output.calva-repl:583:7).
+; Unable to find static field: parseUnsignedInt in class java.lang.Integer
+clj꞉decimals.binaries꞉> 
+(map #(. Integer %) (seq word))
+; Error printing return value (ClassCastException) at decimals.binaries/eval8241$fn (form-init8282825091467793111.clj:587).
+; class java.lang.Character cannot be cast to class java.lang.String (java.lang.Character and java.lang.String are in module java.base of loader 'bootstrap')
+clj꞉decimals.binaries꞉> 
+; Syntax error (NoSuchFieldException) compiling . at (.calva/output-window/output.calva-repl:587:7).
+; p1__8246_SHARP_
+clj꞉decimals.binaries꞉> 
+#'decimals.hexadecimal/group-to-hexa
+clj꞉decimals.hexadecimal꞉> 
+(group-to-hexa "1111")
+; Execution error (ClassCastException) at decimals.hexadecimal/group-to-hexa$fn (form-init8282825091467793111.clj:14).
+; class java.lang.Integer cannot be cast to class clojure.lang.IFn (java.lang.Integer is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉decimals.hexadecimal꞉> 
+(def values (map int (seq word)))
+; Syntax error compiling at (.calva/output-window/output.calva-repl:600:22).
+; Unable to resolve symbol: word in this context
+clj꞉decimals.hexadecimal꞉> 
+(def word "1111")
+#'decimals.hexadecimal/word
+clj꞉decimals.hexadecimal꞉> 
+(def values (map int (seq word)))
+#'decimals.hexadecimal/values
+clj꞉decimals.hexadecimal꞉> 
+values
+(49 49 49 49)
+clj꞉decimals.hexadecimal꞉> 
+(def bins (map #(% - 48) values))
+#'decimals.hexadecimal/bins
+clj꞉decimals.hexadecimal꞉> 
+bins
+; Error printing return value (ClassCastException) at decimals.hexadecimal/fn (form-init8282825091467793111.clj:613).
+; class java.lang.Integer cannot be cast to class clojure.lang.IFn (java.lang.Integer is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+clj꞉decimals.hexadecimal꞉> 
+#'decimals.hexadecimal/group-to-hexa
+clj꞉decimals.hexadecimal꞉> 
+(group-to-hexa "1111")
+"F"
+clj꞉decimals.hexadecimal꞉> 
+(group-to-hexa "1110")
+"E"
+clj꞉decimals.hexadecimal꞉> 
+(group-to-hexa "0110")
+"6"
+clj꞉decimals.hexadecimal꞉> 
