@@ -1,0 +1,11 @@
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\large Introducción}{1}{section*.2}%
+\contentsline {section}{\large Respuesta a los ejercicios propuestos}{1}{section*.3}%
+\contentsline {subsection}{Monitor de recursos del computador}{1}{section*.4}%
+\contentsline {subsubsection}{Preguntas adicionales al proceso}{2}{section*.7}%
+\contentsline {subsection}{Niveles de batería en dispositivos IoT}{3}{section*.8}%
+\contentsline {subsubsection}{Preguntas adicionales al proceso}{9}{section*.9}%
+\contentsline {subsection}{Niveles de batería en dispositivos móviles}{11}{section*.10}%
+\contentsline {section}{\large Conclusiones}{11}{section*.11}%
+\contentsline {section}{\large \textbf {Referencias}}{13}{section*.12}%
