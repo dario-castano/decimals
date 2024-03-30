@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.27)  27 MAR 2024 17:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.27)  30 MAR 2024 11:54
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -956,20 +956,7 @@ LaTeX Info: Redefining \BHBI on input line 139.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-[Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count352
-\scratchdimen=\dimen307
-\scratchbox=\box77
-\nofMPsegments=\count353
-\nofMParguments=\count354
-\everyMPshowfont=\toks38
-\MPscratchCnt=\count355
-\MPscratchDim=\dimen308
-\MPnumerator=\count356
-\makeMPintoPDFobject=\count357
-\everyMPtoPDFconversion=\toks39
-) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+(/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 
 (/usr/share/texlive/texmf-dist/tex/latex/grfext/grfext.sty
@@ -1043,7 +1030,26 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 \tf@toc=\write10
 \openout10 = `entrega.toc'.
 
- [1]
+ [1] (./entrega.lof
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+LaTeX Info: Redefining \. on input line 2.
+LaTeX Info: Redefining \% on input line 2.
+)
+\tf@lof=\write11
+\openout11 = `entrega.lof'.
+
+
+[2] (./entrega.lot
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+LaTeX Info: Redefining \. on input line 2.
+LaTeX Info: Redefining \% on input line 2.
+)
+\tf@lot=\write12
+\openout12 = `entrega.lot'.
+
+ [3]
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -1056,31 +1062,56 @@ LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 1
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
-210.
+213.
 
 (/usr/share/texlive/texmf-dist/tex/latex/lm/ts1lmtt.fd
 File: ts1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [3{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}] [4] [5] [6] 
 [7] [8] [9]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 339.
+(Font)              <10> on input line 346.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 339.
+(Font)              <7> on input line 346.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 339.
+(Font)              <5> on input line 346.
 \openout7 = `entrega.pyg'.
 
 
 (./_minted-entrega/default.pygstyle)
-(./_minted-entrega/16A19FC862A00B7ADF17A7996C2DCC3A431CDCDFEC490E7EEBD00BEE8C83
+(./_minted-entrega/A5E70E2C792DB46D43B89BA48F0F16A6431CDCDFEC490E7EEBD00BEE8C83
 7C3B.pygtex
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <12> not available
 (Font)              Font shape `T1/lmtt/b/n' tried instead on input line 2.
- [10]) [11] [12] (./entrega.bbl
+ [10] [11])
+\openout7 = `entrega.pyg'.
+
+
+(./_minted-entrega/EA1193D39E505959F009B40C21BC1C61431CDCDFEC490E7EEBD00BEE8C83
+7C3B.pygtex [12] [13])
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `htb') on input line 454.
+
+[14]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `htb') on input line 489.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `htb') on input line 516.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `htb') on input line 542.
+
+[15{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texl
+ive/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texlive/texmf-dist/
+fonts/enc/dvips/lm/lm-mathsy.enc}] [16] (./entrega.bbl [17] [18] [19]
 
 Package natbib Warning: Empty `thebibliography' environment on input line 3.
 
-) AED endfloat: Processing end Figures and Tables [13
+) AED endfloat: Processing end Figures and Tables [20
 
 ] (./entrega.aux
 LaTeX Info: Redefining \. on input line 23.
@@ -1089,31 +1120,34 @@ LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
 Package rerunfilecheck Info: File `entrega.out' has not changed.
-(rerunfilecheck)             Checksum: 58A00E826E85BCADC854522D6990508B;1337.
+(rerunfilecheck)             Checksum: 0B54496F1DA2175B8823A0D22520D5E2;1338.
 runsystem(rm entrega.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 28376 strings out of 477985
- 534301 string characters out of 5839380
- 1864388 words of memory out of 6000000
- 48011 multiletter control sequences out of 15000+600000
+ 28124 strings out of 478087
+ 531258 string characters out of 5842650
+ 1880388 words of memory out of 6000000
+ 47635 multiletter control sequences out of 15000+600000
  592648 words of font info for 86 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 99i,12n,103p,674b,833s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,12n,103p,591b,833s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/lm/lmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr1
-2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/lm/lmri12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/lm/lmtk10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtt1
-0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtt12.pfb>
-Output written on entrega.pdf (15 pages, 260282 bytes).
+1/public/lm/lmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/lm/lmri12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy1
+0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/lm/lmtk10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/lm/lmtt12.pfb>
+Output written on entrega.pdf (24 pages, 304653 bytes).
 PDF statistics:
- 193 PDF objects out of 1000 (max. 8388607)
- 151 compressed objects within 2 object streams
- 34 named destinations out of 1000 (max. 500000)
+ 274 PDF objects out of 1000 (max. 8388607)
+ 214 compressed objects within 3 object streams
+ 50 named destinations out of 1000 (max. 500000)
  69 words of extra memory for PDF output out of 10000 (max. 10000000)
 

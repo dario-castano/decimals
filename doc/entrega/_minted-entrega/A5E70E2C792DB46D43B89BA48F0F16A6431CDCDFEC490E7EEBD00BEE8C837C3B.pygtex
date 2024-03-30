@@ -1,4 +1,7 @@
 \begin{Verbatim}[commandchars=\\\{\}]
+\PYG{p}{(}\PYG{k+kd}{ns }\PYG{n+nv}{decimals.binaries}
+\PYG{+w}{  }\PYG{p}{(}\PYG{l+s+ss}{:require}\PYG{+w}{ }\PYG{p}{[}\PYG{n+nv}{clojure.string}\PYG{+w}{ }\PYG{l+s+ss}{:as}\PYG{+w}{ }\PYG{n+nv}{str}\PYG{p}{]))}
+
 \PYG{p}{(}\PYG{k+kd}{defn }\PYG{n+nv}{split\PYGZhy{}decimal}
 \PYG{+w}{  }\PYG{l+s}{\PYGZdq{}Converts a float to a map of integer and decimal part\PYGZdq{}}
 \PYG{+w}{  }\PYG{p}{[}\PYG{n+nv}{n}\PYG{p}{]}
@@ -33,4 +36,26 @@
 \PYG{+w}{     }\PYG{p}{(}\PYG{n+nb}{reduce str }\PYG{p}{(}\PYG{n+nf}{int\PYGZhy{}to\PYGZhy{}binary}\PYG{+w}{ }\PYG{n+nv}{intval}\PYG{+w}{ }\PYG{p}{[]))}
 \PYG{+w}{     }\PYG{l+s}{\PYGZdq{}.\PYGZdq{}}
 \PYG{+w}{     }\PYG{p}{(}\PYG{n+nb}{reduce str }\PYG{p}{(}\PYG{n+nf}{fraction\PYGZhy{}to\PYGZhy{}binary}\PYG{+w}{ }\PYG{n+nv}{decval}\PYG{+w}{ }\PYG{p}{[])))))}
+
+\PYG{p}{(}\PYG{k+kd}{defn }\PYG{n+nv}{split\PYGZhy{}binary}
+\PYG{+w}{  }\PYG{l+s}{\PYGZdq{}Splits a string representation of a binary number\PYGZdq{}}
+\PYG{+w}{  }\PYG{p}{[}\PYG{n+nv}{binary}\PYG{p}{]}
+\PYG{+w}{  }\PYG{p}{(}\PYG{k}{let }\PYG{p}{[}\PYG{n+nv}{splitted}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nf}{str/split}\PYG{+w}{ }\PYG{n+nv}{binary}\PYG{+w}{ }\PYG{o}{\PYGZsh{}}\PYG{l+s}{\PYGZdq{}\PYGZbs{}.\PYGZdq{}}\PYG{p}{)]}
+\PYG{+w}{    }\PYG{p}{\PYGZob{}}\PYG{l+s+ss}{:integer}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nb}{first }\PYG{n+nv}{splitted}\PYG{p}{)}\PYG{+w}{ }\PYG{l+s+ss}{:decimal}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nb}{second }\PYG{n+nv}{splitted}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZcb{}))}
+
+\PYG{p}{(}\PYG{k+kd}{defn }\PYG{n+nv}{extend\PYGZhy{}left}
+\PYG{+w}{  }\PYG{l+s}{\PYGZdq{}Fill zeros to the left to complete spaces in products of 4\PYGZdq{}}
+\PYG{+w}{  }\PYG{p}{[}\PYG{n+nv}{binary\PYGZhy{}str}\PYG{p}{]}
+\PYG{+w}{  }\PYG{p}{(}\PYG{k}{let }\PYG{p}{[}\PYG{n+nv}{len}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nb}{count }\PYG{n+nv}{binary\PYGZhy{}str}\PYG{p}{)]}
+\PYG{+w}{    }\PYG{p}{(}\PYG{k}{if }\PYG{p}{(}\PYG{n+nb}{= }\PYG{p}{(}\PYG{n+nf}{mod}\PYG{+w}{ }\PYG{n+nv}{len}\PYG{+w}{ }\PYG{l+m+mi}{4}\PYG{p}{)}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{)}
+\PYG{+w}{      }\PYG{n+nv}{binary\PYGZhy{}str}
+\PYG{+w}{      }\PYG{p}{(}\PYG{n+nf}{recur}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nf}{str/join}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}\PYGZdq{}}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nf}{flatten}\PYG{+w}{ }\PYG{p}{[}\PYG{l+s}{\PYGZdq{}0\PYGZdq{}}\PYG{+w}{ }\PYG{n+nv}{binary\PYGZhy{}str}\PYG{p}{]))))))}
+
+\PYG{p}{(}\PYG{k+kd}{defn }\PYG{n+nv}{extend\PYGZhy{}right}
+\PYG{+w}{  }\PYG{l+s}{\PYGZdq{}Fill zeros to the right to complete spaces in products of 4\PYGZdq{}}
+\PYG{+w}{  }\PYG{p}{[}\PYG{n+nv}{binary\PYGZhy{}str}\PYG{p}{]}
+\PYG{+w}{  }\PYG{p}{(}\PYG{k}{let }\PYG{p}{[}\PYG{n+nv}{len}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nb}{count }\PYG{n+nv}{binary\PYGZhy{}str}\PYG{p}{)]}
+\PYG{+w}{    }\PYG{p}{(}\PYG{k}{if }\PYG{p}{(}\PYG{n+nb}{= }\PYG{p}{(}\PYG{n+nf}{mod}\PYG{+w}{ }\PYG{n+nv}{len}\PYG{+w}{ }\PYG{l+m+mi}{4}\PYG{p}{)}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{)}
+\PYG{+w}{      }\PYG{n+nv}{binary\PYGZhy{}str}
+\PYG{+w}{      }\PYG{p}{(}\PYG{n+nf}{recur}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nf}{str/join}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}\PYGZdq{}}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nf}{flatten}\PYG{+w}{ }\PYG{p}{[(}\PYG{n+nb}{seq }\PYG{n+nv}{binary\PYGZhy{}str}\PYG{p}{)}\PYG{+w}{ }\PYG{l+s+sc}{\PYGZbs{}0}\PYG{p}{]))))))}
 \end{Verbatim}

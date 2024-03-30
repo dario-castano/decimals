@@ -1,32 +1,16 @@
-; This is the Calva REPL Window.
-; It's just a file, really, with some special treatment from Calva.
-; Use it as a REPL input prompt if you like. (When the REPL is connected.)
-; TIPS: The keyboard shortcut `ctrl+alt+o r` shows and focuses this window
-; Please see https://calva.io/repl-window/ for more info.
+; This is the Calva evaluation results output window.
+; TIPS: The keyboard shortcut `ctrl+alt+o o` shows and focuses this window
+;   when connected to a REPL session.
+; Please see https://calva.io/output/ for more info.
 ; Happy coding! ♥️
 
-; TIPS: As with any Clojure file when the REPL is connected:
-; - `alt+enter` evaluates the current top level form.
-; - `ctrl+enter` evaluates the current form.
-; Special for this file:
-; - `alt+up` and `alt+down` traverse up and down the REPL command history
-;    when the cursor is after the last contents at the prompt
-
-PLEASE NOTE
-We will update the default location of this file. 
-The new default location will be 
-  "<projectRootPath>/.calva/repl.calva-repl"
-For now the legacy path is used by default.
-To give yourself a smooth transition, you can opt in
-to the change, by configuring this setting as false: 
-  "calva.useLegacyReplWindowPath"
-and then add "**/.calva/repl.calva-repl" to your ".gitignore" file.
-
-
-This file is configured as the output destination for all REPL output.
-You can configure this with the setting:
-  "calva.outputDestinations"
-
+; TIPS:
+;   - You can edit the contents here. Use it as a REPL if you like.
+;   - `alt+enter` evaluates the current top level form.
+;   - `ctrl+enter` evaluates the current form.
+;   - `alt+up` and `alt+down` traverse up and down the REPL command history
+;      when the cursor is after the last contents at the prompt
+;   - Clojure lines in stack traces are peekable and clickable.
 
 ; Jacking in...
 ; Connecting using "Leiningen" project type.
@@ -35,596 +19,68 @@ You can configure this with the setting:
 ; 
 
 ; Starting Jack-in Terminal: pushd /home/dario/Documents/repos/clojure/decimals ; lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless ; popd
-; Using host:port 127.0.0.1:44857 ...
+; Using host:port 127.0.0.1:35831 ...
 ; Hooking up nREPL sessions ...
 ; Connected session: clj
 ; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
 nil
-clj꞉decimals.core꞉> 
-"Please see https://calva.io/output/#about-stdout-in-the-repl-window
-about why stdout printed to this file is prepended with `;` to be line comments."
+clj꞉decimals.core꞉>  ; Use `alt+enter` to evaluate
 clj꞉decimals.core꞉> 
 ; Jack-in done.
 clj꞉decimals.core꞉> 
-; Evaluating file: core.clj
-#'decimals.core/-main
+(def binary-str "10101.101")
+#'decimals.core/binary-str
 clj꞉decimals.core꞉> 
-(decimal-to-binary 68.6875)
-"1000100.1011"
-clj꞉decimals.core꞉> 
-; Evaluating file: core.clj
-#'decimals.core/-main
-clj꞉decimals.core꞉> 
-(decimal-to-binary 0.999)
-; Execution error (OutOfMemoryError) at decimals.core/int-to-binary (core.clj:17).
-; Java heap space
-clj꞉decimals.core꞉> 
-#'decimals.core/fraction-to-binary
-clj꞉decimals.core꞉> 
-(decimal-to-binary 0.999)
-; nREPL Connection was closed
-; Jacking in...
-; Connecting using "Leiningen" project type.
-; You can make Calva auto-select this.
-;   - See https://calva.io/connect-sequences/
-; 
-
-; Starting Jack-in Terminal: pushd /home/dario/Documents/repos/clojure/decimals ; lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless ; popd
-; Using host:port 127.0.0.1:45239 ...
-; Hooking up nREPL sessions ...
-; Connected session: clj
-; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
-(decimal-to-binary 0.999)
-clj꞉decimals.core꞉> 
-clj꞉decimals.core꞉> 
-nil
-
-; nREPL Connection was closed
-; Jack-in done.; Jacking in...
-; Connecting using "Leiningen" project type.
-; You can make Calva auto-select this.
-;   - See https://calva.io/connect-sequences/
-; 
-
-; Starting Jack-in Terminal: pushd /home/dario/Documents/repos/clojure/decimals ; lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless ; popd
-; Using host:port 127.0.0.1:44777 ...
-; Hooking up nREPL sessions ...
-; Connected session: clj
-; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
-nil
-clj꞉decimals.core꞉> 
-; Jack-in done.
-clj꞉decimals.core꞉> 
-(decimal-to-binary 0.999)
-; SPLIT->{:integer 1, :decimal 0.998}
-; N->0.999
-; SPLIT->{:integer 1, :decimal 0.996}
-; N->0.998
-; SPLIT->{:integer 1, :decimal 0.992}
-; N->0.996
-; SPLIT->{:integer 1, :decimal 0.984}
-; N->0.992
-; SPLIT->{:integer 1, :decimal 0.968}
-; N->0.984
-; SPLIT->{:integer 1, :decimal 0.9359999999999999}
-; N->0.968
-; SPLIT->{:integer 1, :decimal 0.8719999999999999}
-; N->0.9359999999999999
-; SPLIT->{:integer 1, :decimal 0.7439999999999998}
-; N->0.8719999999999999
-; SPLIT->{:integer 1, :decimal 0.48799999999999955}
-; N->0.7439999999999998
-; SPLIT->{:integer 0, :decimal 0.9759999999999991}
-; N->0.48799999999999955
-; SPLIT->{:integer 1, :decimal 0.9519999999999982}
-; N->0.9759999999999991
-; SPLIT->{:integer 1, :decimal 0.9039999999999964}
-; N->0.9519999999999982
-; SPLIT->{:integer 1, :decimal 0.8079999999999927}
-; N->0.9039999999999964
-; SPLIT->{:integer 1, :decimal 0.6159999999999854}
-; N->0.8079999999999927
-; SPLIT->{:integer 1, :decimal 0.2319999999999709}
-; N->0.6159999999999854
-; SPLIT->{:integer 0, :decimal 0.4639999999999418}
-; N->0.2319999999999709
-; SPLIT->{:integer 0, :decimal 0.9279999999998836}
-; N->0.4639999999999418
-; SPLIT->{:integer 1, :decimal 0.8559999999997672}
-; N->0.9279999999998836
-; SPLIT->{:integer 1, :decimal 0.7119999999995343}
-; N->0.8559999999997672
-; SPLIT->{:integer 1, :decimal 0.4239999999990687}
-; N->0.7119999999995343
-; SPLIT->{:integer 0, :decimal 0.8479999999981374}
-; N->0.4239999999990687
-; SPLIT->{:integer 1, :decimal 0.6959999999962747}
-; N->0.8479999999981374
-; SPLIT->{:integer 1, :decimal 0.3919999999925494}
-; N->0.6959999999962747
-; SPLIT->{:integer 0, :decimal 0.7839999999850988}
-; N->0.3919999999925494
-; SPLIT->{:integer 1, :decimal 0.5679999999701977}
-; N->0.7839999999850988
-; SPLIT->{:integer 1, :decimal 0.13599999994039536}
-; N->0.5679999999701977
-; SPLIT->{:integer 0, :decimal 0.2719999998807907}
-; N->0.13599999994039536
-; SPLIT->{:integer 0, :decimal 0.5439999997615814}
-; N->0.2719999998807907
-; SPLIT->{:integer 1, :decimal 0.08799999952316284}
-; N->0.5439999997615814
-; SPLIT->{:integer 0, :decimal 0.17599999904632568}
-; N->0.08799999952316284
-; SPLIT->{:integer 0, :decimal 0.35199999809265137}
-; N->0.17599999904632568
-; SPLIT->{:integer 0, :decimal 0.7039999961853027}
-; N->0.35199999809265137
-; SPLIT->{:integer 1, :decimal 0.40799999237060547}
-; N->0.7039999961853027
-; SPLIT->{:integer 0, :decimal 0.8159999847412109}
-; N->0.40799999237060547
-; SPLIT->{:integer 1, :decimal 0.6319999694824219}
-; N->0.8159999847412109
-; SPLIT->{:integer 1, :decimal 0.26399993896484375}
-; N->0.6319999694824219
-; SPLIT->{:integer 0, :decimal 0.5279998779296875}
-; N->0.26399993896484375
-; SPLIT->{:integer 1, :decimal 0.055999755859375}
-; N->0.5279998779296875
-; SPLIT->{:integer 0, :decimal 0.11199951171875}
-; N->0.055999755859375
-; SPLIT->{:integer 0, :decimal 0.2239990234375}
-; N->0.11199951171875
-; SPLIT->{:integer 0, :decimal 0.447998046875}
-; N->0.2239990234375
-; SPLIT->{:integer 0, :decimal 0.89599609375}
-; N->0.447998046875
-; SPLIT->{:integer 1, :decimal 0.7919921875}
-; N->0.89599609375
-; SPLIT->{:integer 1, :decimal 0.583984375}
-; N->0.7919921875
-; SPLIT->{:integer 1, :decimal 0.16796875}
-; N->0.583984375
-; SPLIT->{:integer 0, :decimal 0.3359375}
-; N->0.16796875
-; SPLIT->{:integer 0, :decimal 0.671875}
-; N->0.3359375
-; SPLIT->{:integer 1, :decimal 0.34375}
-; N->0.671875
-; SPLIT->{:integer 0, :decimal 0.6875}
-; N->0.34375
-; SPLIT->{:integer 1, :decimal 0.375}
-; N->0.6875
-; SPLIT->{:integer 0, :decimal 0.75}
-; N->0.375
-; SPLIT->{:integer 1, :decimal 0.5}
-; N->0.75
-; SPLIT->{:integer 1, :decimal 0.0}
-; N->0.5
-"0.11111111101111100111011011001000101101000011100101011"
-clj꞉decimals.core꞉> 
-#'decimals.core/fraction-to-binary
-clj꞉decimals.core꞉> 
-(decimal-to-binary 0.999)
-; N->0.999
-; SPLIT->{:integer 1, :decimal 0.998}
-; N->0.998
-; SPLIT->{:integer 1, :decimal 0.996}
-; N->0.996
-; SPLIT->{:integer 1, :decimal 0.992}
-; N->0.992
-; SPLIT->{:integer 1, :decimal 0.984}
-; N->0.984
-; SPLIT->{:integer 1, :decimal 0.968}
-; N->0.968
-; SPLIT->{:integer 1, :decimal 0.9359999999999999}
-; N->0.9359999999999999
-; SPLIT->{:integer 1, :decimal 0.8719999999999999}
-; N->0.8719999999999999
-; SPLIT->{:integer 1, :decimal 0.7439999999999998}
-; N->0.7439999999999998
-; SPLIT->{:integer 1, :decimal 0.48799999999999955}
-; N->0.48799999999999955
-; SPLIT->{:integer 0, :decimal 0.9759999999999991}
-; N->0.9759999999999991
-; SPLIT->{:integer 1, :decimal 0.9519999999999982}
-; N->0.9519999999999982
-; SPLIT->{:integer 1, :decimal 0.9039999999999964}
-; N->0.9039999999999964
-; SPLIT->{:integer 1, :decimal 0.8079999999999927}
-; N->0.8079999999999927
-; SPLIT->{:integer 1, :decimal 0.6159999999999854}
-; N->0.6159999999999854
-; SPLIT->{:integer 1, :decimal 0.2319999999999709}
-; N->0.2319999999999709
-; SPLIT->{:integer 0, :decimal 0.4639999999999418}
-; N->0.4639999999999418
-; SPLIT->{:integer 0, :decimal 0.9279999999998836}
-; N->0.9279999999998836
-; SPLIT->{:integer 1, :decimal 0.8559999999997672}
-; N->0.8559999999997672
-; SPLIT->{:integer 1, :decimal 0.7119999999995343}
-; N->0.7119999999995343
-; SPLIT->{:integer 1, :decimal 0.4239999999990687}
-; N->0.4239999999990687
-; SPLIT->{:integer 0, :decimal 0.8479999999981374}
-; N->0.8479999999981374
-; SPLIT->{:integer 1, :decimal 0.6959999999962747}
-; N->0.6959999999962747
-; SPLIT->{:integer 1, :decimal 0.3919999999925494}
-; N->0.3919999999925494
-; SPLIT->{:integer 0, :decimal 0.7839999999850988}
-; N->0.7839999999850988
-; SPLIT->{:integer 1, :decimal 0.5679999999701977}
-; N->0.5679999999701977
-; SPLIT->{:integer 1, :decimal 0.13599999994039536}
-; N->0.13599999994039536
-; SPLIT->{:integer 0, :decimal 0.2719999998807907}
-; N->0.2719999998807907
-; SPLIT->{:integer 0, :decimal 0.5439999997615814}
-; N->0.5439999997615814
-; SPLIT->{:integer 1, :decimal 0.08799999952316284}
-; N->0.08799999952316284
-; SPLIT->{:integer 0, :decimal 0.17599999904632568}
-; N->0.17599999904632568
-; SPLIT->{:integer 0, :decimal 0.35199999809265137}
-; N->0.35199999809265137
-; SPLIT->{:integer 0, :decimal 0.7039999961853027}
-; N->0.7039999961853027
-; SPLIT->{:integer 1, :decimal 0.40799999237060547}
-; N->0.40799999237060547
-; SPLIT->{:integer 0, :decimal 0.8159999847412109}
-; N->0.8159999847412109
-; SPLIT->{:integer 1, :decimal 0.6319999694824219}
-; N->0.6319999694824219
-; SPLIT->{:integer 1, :decimal 0.26399993896484375}
-; N->0.26399993896484375
-; SPLIT->{:integer 0, :decimal 0.5279998779296875}
-; N->0.5279998779296875
-; SPLIT->{:integer 1, :decimal 0.055999755859375}
-; N->0.055999755859375
-; SPLIT->{:integer 0, :decimal 0.11199951171875}
-; N->0.11199951171875
-; SPLIT->{:integer 0, :decimal 0.2239990234375}
-; N->0.2239990234375
-; SPLIT->{:integer 0, :decimal 0.447998046875}
-; N->0.447998046875
-; SPLIT->{:integer 0, :decimal 0.89599609375}
-; N->0.89599609375
-; SPLIT->{:integer 1, :decimal 0.7919921875}
-; N->0.7919921875
-; SPLIT->{:integer 1, :decimal 0.583984375}
-; N->0.583984375
-; SPLIT->{:integer 1, :decimal 0.16796875}
-; N->0.16796875
-; SPLIT->{:integer 0, :decimal 0.3359375}
-; N->0.3359375
-; SPLIT->{:integer 0, :decimal 0.671875}
-; N->0.671875
-; SPLIT->{:integer 1, :decimal 0.34375}
-; N->0.34375
-; SPLIT->{:integer 0, :decimal 0.6875}
-; N->0.6875
-; SPLIT->{:integer 1, :decimal 0.375}
-; N->0.375
-; SPLIT->{:integer 0, :decimal 0.75}
-; N->0.75
-; SPLIT->{:integer 1, :decimal 0.5}
-; N->0.5
-; SPLIT->{:integer 1, :decimal 0.0}
-"0.11111111101111100111011011001000101101000011100101011"
-clj꞉decimals.core꞉> 
-#'decimals.core/-main
-clj꞉decimals.core꞉> 
-#'decimals.core/split-decimal
-clj꞉decimals.core꞉> 
-(split-decimal 3.752)
-{:integer 3, :decimal 0.7519999999999998}
-clj꞉decimals.core꞉> 
-; Jacking in...
-; Connecting using "Leiningen" project type.
-; You can make Calva auto-select this.
-;   - See https://calva.io/connect-sequences/
-; 
-
-; Starting Jack-in Terminal: pushd /home/dario/Documents/repos/clojure/decimals ; lein update-in :dependencies conj '[nrepl,"1.0.0"]' -- update-in :plugins conj '[cider/cider-nrepl,"0.28.5"]' -- update-in '[:repl-options,:nrepl-middleware]' conj '["cider.nrepl/cider-middleware"]' -- repl :headless ; popd
-; nREPL Connection was closed
-; Using host:port 127.0.0.1:35859 ...
-; Hooking up nREPL sessions ...
-; Connected session: clj
-; Evaluating code from settings: 'calva.autoEvaluateCode.onConnect.clj'
-nil
-clj꞉decimals.core꞉> 
-; Jack-in done.
-clj꞉decimals.core꞉> 
-#'decimals.binaries/split-binary
-clj꞉decimals.binaries꞉> 
-(split-binary "1101010.11001")
-; Execution error (ClassCastException) at decimals.binaries/split-binary (form-init8282825091467793111.clj:44).
-; class java.lang.String cannot be cast to class java.util.regex.Pattern (java.lang.String and java.util.regex.Pattern are in module java.base of loader 'bootstrap')
-clj꞉decimals.binaries꞉> 
-(str/split "1101010.101" ".")
-; Execution error (ClassCastException) at decimals.binaries/eval8054 (form-init8282825091467793111.clj:347).
-; class java.lang.String cannot be cast to class java.util.regex.Pattern (java.lang.String and java.util.regex.Pattern are in module java.base of loader 'bootstrap')
-clj꞉decimals.binaries꞉> 
-#'decimals.binaries/split-binary
-clj꞉decimals.binaries꞉> 
-(str/split "1101010.101" ".")
-; Execution error (ClassCastException) at decimals.binaries/eval8057 (form-init8282825091467793111.clj:353).
-; class java.lang.String cannot be cast to class java.util.regex.Pattern (java.lang.String and java.util.regex.Pattern are in module java.base of loader 'bootstrap')
-clj꞉decimals.binaries꞉> 
-{:integer nil, :decimal nil}
-(split-binary "1101010.11001")
-clj꞉decimals.binaries꞉> 
-#'decimals.binaries/split-binary
-clj꞉decimals.binaries꞉> 
-(split-binary "1101010.11001")
-{:integer "1101010", :decimal "11001"}
-clj꞉decimals.binaries꞉> 
-(rem 16 4)
-0
-clj꞉decimals.binaries꞉> 
-(rem 13 4)
-1
-clj꞉decimals.binaries꞉> 
-(rem 2 4)
-2
-clj꞉decimals.binaries꞉> 
-(rem 14 4)
-2
-clj꞉decimals.binaries꞉> 
-#'decimals.binaries/extend-left
-clj꞉decimals.binaries꞉> 
-(extend-left "10001")
-#'decimals.binaries/extend-left
-clj꞉decimals.binaries꞉> 
-
-((0) \1 \0 \0 \0 \1)
-clj꞉decimals.binaries꞉> 
-(extend-left "10001")
-(("0") \1 \0 \0 \0 \1)
-clj꞉decimals.binaries꞉> 
-#'decimals.binaries/split-binary
-clj꞉decimals.binaries꞉> 
-(extend-left "10001")
-(("0") \1 \0 \0 \0 \1)
-clj꞉decimals.binaries꞉> 
-#'decimals.binaries/extend-left
-clj꞉decimals.binaries꞉> 
-(extend-left "10001")
-("10001" "0")
-clj꞉decimals.binaries꞉> 
-(list "199191")
-("199191")
-clj꞉decimals.binaries꞉> 
-(flatten (extend-left "10001"))
-("10001" "0")
-clj꞉decimals.binaries꞉> 
-#'decimals.binaries/extend-left
-clj꞉decimals.binaries꞉> 
-(extend-left "10001")
-((\1 \0 \0 \0 \1) "0")
-clj꞉decimals.binaries꞉> 
-#'decimals.binaries/extend-left
-clj꞉decimals.binaries꞉> 
-(extend-left "10001")
-(("0") \1 \0 \0 \0 \1)
-clj꞉decimals.binaries꞉> 
-(flatten '(("0") \1 \0 \0 \0 \1))
-("0" \1 \0 \0 \0 \1)
-clj꞉decimals.binaries꞉> 
-#'decimals.binaries/extend-left
-clj꞉decimals.binaries꞉> 
-(extend-left "10001")
-(("0") \1 \0 \0 \0 \1)
-clj꞉decimals.binaries꞉> 
-#'decimals.binaries/extend-left
-clj꞉decimals.binaries꞉> 
-(extend-left "10001")
-"((\"0\") \\1 \\0 \\0 \\0 \\1)"
-clj꞉decimals.binaries꞉> 
-#'decimals.binaries/extend-left
-clj꞉decimals.binaries꞉> 
-(extend-left "10001")
-((\0) \1 \0 \0 \0 \1)
-clj꞉decimals.binaries꞉> 
-#'decimals.binaries/extend-left
-clj꞉decimals.binaries꞉> 
-(extend-left "10001")
-(\0 \1 \0 \0 \0 \1)
-clj꞉decimals.binaries꞉> 
-(rem 5 4)
-1
-clj꞉decimals.binaries꞉> 
-(rem 8 4)
-0
-clj꞉decimals.binaries꞉> 
-(rem 5 8)
-5
-clj꞉decimals.binaries꞉> 
-(mod 5 4)
-1
-clj꞉decimals.binaries꞉> 
-(mod 6 4)
-2
-clj꞉decimals.binaries꞉> 
-(mod 7 4)
-3
-clj꞉decimals.binaries꞉> 
-(mod 8 4)
-0
-clj꞉decimals.binaries꞉> 
-#'decimals.binaries/extend-left
-clj꞉decimals.binaries꞉> 
-(extend-left "10001")
-(\0 \0 \0 \1 \0 \0 \0 \1)
-clj꞉decimals.binaries꞉> 
-#'decimals.binaries/extend-right
-clj꞉decimals.binaries꞉> 
-(extend-right "10001")
-; Execution error (ClassCastException) at decimals.binaries/extend-right (form-init8282825091467793111.clj:61).
-; class java.lang.String cannot be cast to class clojure.lang.IPersistentCollection (java.lang.String is in module java.base of loader 'bootstrap'; clojure.lang.IPersistentCollection is in unnamed module of loader 'app')
-clj꞉decimals.binaries꞉> 
-(def binary-str "10001")
-#'decimals.binaries/binary-str
-clj꞉decimals.binaries꞉> 
-(conj binary-str \0)
-; Execution error (ClassCastException) at decimals.binaries/eval8148 (form-init8282825091467793111.clj:472).
-; class java.lang.String cannot be cast to class clojure.lang.IPersistentCollection (java.lang.String is in module java.base of loader 'bootstrap'; clojure.lang.IPersistentCollection is in unnamed module of loader 'app')
-clj꞉decimals.binaries꞉> 
 binary-str
-"10001"
-clj꞉decimals.binaries꞉> 
-(list binary-str)
-("10001")
-clj꞉decimals.binaries꞉> 
-(seq binary-str)
-(\1 \0 \0 \0 \1)
-clj꞉decimals.binaries꞉> 
-#'decimals.binaries/extend-right
-clj꞉decimals.binaries꞉> 
-(extend-right "10001")
-(\0 \0 \0 \1 \0 \0 \0 \1)
-clj꞉decimals.binaries꞉> 
-#'decimals.binaries/extend-right
-clj꞉decimals.binaries꞉> 
-(extend-right "10001")
-(\0 \0 \0 "10001")
-clj꞉decimals.binaries꞉> 
-#'decimals.binaries/extend-right
-clj꞉decimals.binaries꞉> 
-(extend-right "10001")
-("10001" \0 \0 \0)
-clj꞉decimals.binaries꞉> 
-(str/join binary-str "0")
-"0"
-clj꞉decimals.binaries꞉> 
-(str/join "" (flatten binary-str \0))
-; Execution error (ArityException) at decimals.binaries/eval8165 (form-init8282825091467793111.clj:503).
-; Wrong number of args (2) passed to: clojure.core/flatten
-clj꞉decimals.binaries꞉> 
-(str/join "" (flatten [binary-str "0"]))
-"100010"
-clj꞉decimals.binaries꞉> 
-(str/join "" (flatten ["0" binary-str]))
-"010001"
-clj꞉decimals.binaries꞉> 
-(extend-right "10001")
-("10001" \0 \0 \0)
-clj꞉decimals.binaries꞉> 
-(extend-left "10001")
-(\0 \0 \0 \1 \0 \0 \0 \1)
-clj꞉decimals.binaries꞉> 
-#'decimals.binaries/extend-left
-clj꞉decimals.binaries꞉> 
-(extend-left "10001")
-()
-clj꞉decimals.binaries꞉> 
-#'decimals.binaries/extend-right
-clj꞉decimals.binaries꞉> 
-(extend-right "10001")
-()
-clj꞉decimals.binaries꞉> 
-      (recur (str/join "" (flatten [(seq binary-str) \0]))))))
-[(seq binary-str) \0]
-[(\1 \0 \0 \0 \1) \0]
-clj꞉decimals.binaries꞉> 
-(flatten [(seq binary-str) \0])
-(\1 \0 \0 \0 \1 \0)
-clj꞉decimals.binaries꞉> 
-(flatten [(seq binary-str) \0])
-(str/join "" (flatten [(seq binary-str) \0]))
-"100010"
-clj꞉decimals.binaries꞉> 
-#'decimals.binaries/extend-right
-clj꞉decimals.binaries꞉> 
-; Evaluating file: binaries.clj
-#'decimals.binaries/extend-right
-clj꞉decimals.binaries꞉> 
-(extend-right "10001")
-()
-clj꞉decimals.binaries꞉> 
-#'decimals.binaries/extend-right
-clj꞉decimals.binaries꞉> 
-(extend-right "10001")
-"10001000"
-clj꞉decimals.binaries꞉> 
-#'decimals.binaries/extend-left
-clj꞉decimals.binaries꞉> 
-(extend-left "10001")
-"00010001"
-clj꞉decimals.binaries꞉> 
-(seq "0100")
-(\0 \1 \0 \0)
-clj꞉decimals.binar
-; Syntax error (ClassNotFoundException) compiling at (.calva/output-window/output.calva-repl:1:8111).
-; clj꞉decimals.binar
-clj꞉decimals.binaries꞉> 
-
-(def word "0100")
-#'decimals.binaries/word
-clj꞉decimals.binaries꞉> 
-(map int (seq word))
-(48 49 48 48)
-clj꞉decimals.binaries꞉> 
-(map Integer/parseUnsignedInt (seq word))
-; Syntax error compiling at (.calva/output-window/output.calva-repl:571:1).
-; Unable to find static field: parseUnsignedInt in class java.lang.Integer
-clj꞉decimals.binaries꞉> 
-(map Integer/parseInt (seq word))
-; Syntax error compiling at (.calva/output-window/output.calva-repl:575:1).
-; Unable to find static field: parseInt in class java.lang.Integer
-clj꞉decimals.binaries꞉> 
-(map read-string (seq word))
-; Error printing return value (ClassCastException) at clojure.core/read-string (core.clj:3806).
-; class java.lang.Character cannot be cast to class java.lang.String (java.lang.Character and java.lang.String are in module java.base of loader 'bootstrap')
-clj꞉decimals.binaries꞉> 
-(map #(. Integer/parseUnsignedInt %) (seq word))
-; Syntax error compiling at (.calva/output-window/output.calva-repl:583:7).
-; Unable to find static field: parseUnsignedInt in class java.lang.Integer
-clj꞉decimals.binaries꞉> 
-(map #(. Integer %) (seq word))
-; Error printing return value (ClassCastException) at decimals.binaries/eval8241$fn (form-init8282825091467793111.clj:587).
-; class java.lang.Character cannot be cast to class java.lang.String (java.lang.Character and java.lang.String are in module java.base of loader 'bootstrap')
-clj꞉decimals.binaries꞉> 
-; Syntax error (NoSuchFieldException) compiling . at (.calva/output-window/output.calva-repl:587:7).
-; p1__8246_SHARP_
-clj꞉decimals.binaries꞉> 
-#'decimals.hexadecimal/group-to-hexa
+"10101.101"
+clj꞉decimals.core꞉> 
+(bins/split-binary binary-str)
+{:integer "10101", :decimal "101"}
+clj꞉decimals.core꞉> 
+(def parts (bins/split-binary binary-str))
+#'decimals.core/parts
+clj꞉decimals.core꞉> 
+parts
+{:integer "10101", :decimal "101"}
+clj꞉decimals.core꞉> 
+(def int-part (bins/extend-left (:integer parts)))
+#'decimals.core/int-part
+clj꞉decimals.core꞉> 
+int-part
+"00010101"
+clj꞉decimals.core꞉> 
+(def dec-part (bins/extend-right (:decimal parts)))
+#'decimals.core/dec-part
+clj꞉decimals.core꞉> 
+dec-part
+"1010"
+clj꞉decimals.core꞉> 
+(take 4 "10101111")
+(\1 \0 \1 \0)
+clj꞉decimals.core꞉> 
+; Evaluating file: hexadecimal.clj
+#'decimals.hexadecimal/bin-to-hexa
 clj꞉decimals.hexadecimal꞉> 
-(group-to-hexa "1111")
-; Execution error (ClassCastException) at decimals.hexadecimal/group-to-hexa$fn (form-init8282825091467793111.clj:14).
-; class java.lang.Integer cannot be cast to class clojure.lang.IFn (java.lang.Integer is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+(build-hex "10101111" [])
+"FA"
 clj꞉decimals.hexadecimal꞉> 
-(def values (map int (seq word)))
-; Syntax error compiling at (.calva/output-window/output.calva-repl:600:22).
-; Unable to resolve symbol: word in this context
+#'decimals.hexadecimal/build-hex
 clj꞉decimals.hexadecimal꞉> 
-(def word "1111")
-#'decimals.hexadecimal/word
+(build-hex "10101111" [])
+"AF"
 clj꞉decimals.hexadecimal꞉> 
-(def values (map int (seq word)))
-#'decimals.hexadecimal/values
+; Evaluating file: hexadecimal.clj
+#'decimals.hexadecimal/bin-to-hexa
 clj꞉decimals.hexadecimal꞉> 
-values
-(49 49 49 49)
+(bin-to-hexa "101.01110")
+"5.70"
 clj꞉decimals.hexadecimal꞉> 
-(def bins (map #(% - 48) values))
-#'decimals.hexadecimal/bins
+(bin-to-hexa "101.01111")
+"5.78"
 clj꞉decimals.hexadecimal꞉> 
-bins
-; Error printing return value (ClassCastException) at decimals.hexadecimal/fn (form-init8282825091467793111.clj:613).
-; class java.lang.Integer cannot be cast to class clojure.lang.IFn (java.lang.Integer is in module java.base of loader 'bootstrap'; clojure.lang.IFn is in unnamed module of loader 'app')
+(bin-to-hexa "101.11111")
+"5.F8"
 clj꞉decimals.hexadecimal꞉> 
-#'decimals.hexadecimal/group-to-hexa
-clj꞉decimals.hexadecimal꞉> 
-(group-to-hexa "1111")
-"F"
-clj꞉decimals.hexadecimal꞉> 
-(group-to-hexa "1110")
-"E"
-clj꞉decimals.hexadecimal꞉> 
-(group-to-hexa "0110")
-"6"
+(bin-to-hexa "1011101011.11111")
+"2EB.F8"
 clj꞉decimals.hexadecimal꞉> 

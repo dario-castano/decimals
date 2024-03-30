@@ -1,0 +1,39 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{p}{(}\PYG{k+kd}{ns }\PYG{n+nv}{decimals.hexadecimal}
+\PYG{+w}{  }\PYG{p}{(}\PYG{l+s+ss}{:require}\PYG{+w}{ }\PYG{p}{[}\PYG{n+nv}{decimals.binaries}\PYG{+w}{ }\PYG{l+s+ss}{:as}\PYG{+w}{ }\PYG{n+nv}{bins}\PYG{p}{]}
+\PYG{+w}{            }\PYG{p}{[}\PYG{n+nv}{clojure.string}\PYG{+w}{ }\PYG{l+s+ss}{:as}\PYG{+w}{ }\PYG{n+nv}{str}\PYG{p}{]))}
+
+
+\PYG{p}{(}\PYG{k+kd}{defn }\PYG{n+nv}{group\PYGZhy{}to\PYGZhy{}hexa}
+\PYG{+w}{  }\PYG{l+s}{\PYGZdq{}Returns a hexadecimal code from a group of 4 binaries\PYGZdq{}}
+\PYG{+w}{  }\PYG{p}{[}\PYG{n+nv}{word}\PYG{p}{]}
+\PYG{+w}{  }\PYG{p}{(}\PYG{k}{let }\PYG{p}{[}\PYG{n+nv}{hexa}\PYG{+w}{ }\PYG{p}{[}\PYG{l+s}{\PYGZdq{}0\PYGZdq{}}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}1\PYGZdq{}}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}2\PYGZdq{}}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}3\PYGZdq{}}
+\PYG{+w}{              }\PYG{l+s}{\PYGZdq{}4\PYGZdq{}}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}5\PYGZdq{}}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}6\PYGZdq{}}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}7\PYGZdq{}}
+\PYG{+w}{              }\PYG{l+s}{\PYGZdq{}8\PYGZdq{}}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}9\PYGZdq{}}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}A\PYGZdq{}}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}B\PYGZdq{}}
+\PYG{+w}{              }\PYG{l+s}{\PYGZdq{}C\PYGZdq{}}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}D\PYGZdq{}}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}E\PYGZdq{}}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}F\PYGZdq{}}\PYG{p}{]}
+\PYG{+w}{        }\PYG{n+nv}{group}\PYG{+w}{ }\PYG{p}{[}\PYG{l+m+mi}{8}\PYG{+w}{ }\PYG{l+m+mi}{4}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{]}
+\PYG{+w}{        }\PYG{n+nv}{values}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nb}{map int }\PYG{p}{(}\PYG{n+nb}{seq }\PYG{n+nv}{word}\PYG{p}{))}
+\PYG{+w}{        }\PYG{n+nv}{bins}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nb}{map }\PYG{o}{\PYGZsh{}}\PYG{p}{(}\PYG{n+nb}{\PYGZhy{} }\PYG{n+nv}{\PYGZpc{}}\PYG{+w}{ }\PYG{l+m+mi}{48}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nv}{values}\PYG{p}{)}
+\PYG{+w}{        }\PYG{n+nv}{code}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nb}{reduce + }\PYG{p}{(}\PYG{n+nb}{map }\PYG{p}{(}\PYG{k}{fn }\PYG{p}{[}\PYG{n+nv}{x}\PYG{+w}{ }\PYG{n+nv}{y}\PYG{p}{]}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nb}{* }\PYG{n+nv}{x}\PYG{+w}{ }\PYG{n+nv}{y}\PYG{p}{))}\PYG{+w}{ }\PYG{n+nv}{bins}\PYG{+w}{ }\PYG{n+nv}{group}\PYG{p}{))]}
+\PYG{+w}{    }\PYG{p}{(}\PYG{n+nb}{get }\PYG{n+nv}{hexa}\PYG{+w}{ }\PYG{n+nv}{code}\PYG{p}{)))}
+
+\PYG{p}{(}\PYG{k+kd}{defn }\PYG{n+nv}{build\PYGZhy{}hex}
+\PYG{+w}{  }\PYG{l+s}{\PYGZdq{}Build an hexadecimal from a 4\PYGZhy{}product length binary string\PYGZdq{}}
+\PYG{+w}{  }\PYG{p}{[}\PYG{n+nv}{binary\PYGZhy{}str}\PYG{+w}{ }\PYG{n+nv}{result}\PYG{p}{]}
+\PYG{+w}{  }\PYG{p}{(}\PYG{k}{if }\PYG{p}{(}\PYG{n+nf}{empty?}\PYG{+w}{ }\PYG{n+nv}{binary\PYGZhy{}str}\PYG{p}{)}
+\PYG{+w}{    }\PYG{p}{(}\PYG{n+nf}{str/join}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nb}{reverse }\PYG{n+nv}{result}\PYG{p}{))}
+\PYG{+w}{    }\PYG{p}{(}\PYG{k}{let }\PYG{p}{[[}\PYG{n+nv}{a}\PYG{+w}{ }\PYG{n+nv}{b}\PYG{+w}{ }\PYG{n+nv}{c}\PYG{+w}{ }\PYG{n+nv}{d}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{+w}{ }\PYG{n+nv}{tail}\PYG{p}{]}\PYG{+w}{ }\PYG{n+nv}{binary\PYGZhy{}str}
+\PYG{+w}{          }\PYG{n+nv}{group}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nb}{seq }\PYG{p}{[}\PYG{n+nv}{a}\PYG{+w}{ }\PYG{n+nv}{b}\PYG{+w}{ }\PYG{n+nv}{c}\PYG{+w}{ }\PYG{n+nv}{d}\PYG{p}{])]}
+\PYG{+w}{      }\PYG{p}{(}\PYG{n+nf}{recur}\PYG{+w}{ }\PYG{n+nv}{tail}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nb}{cons }\PYG{p}{(}\PYG{n+nf}{group\PYGZhy{}to\PYGZhy{}hexa}\PYG{+w}{ }\PYG{n+nv}{group}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nv}{result}\PYG{p}{)))))}
+
+\PYG{p}{(}\PYG{k+kd}{defn }\PYG{n+nv}{bin\PYGZhy{}to\PYGZhy{}hexa}
+\PYG{+w}{  }\PYG{l+s}{\PYGZdq{}Converts a binary decimal number to hexadecimal\PYGZdq{}}
+\PYG{+w}{  }\PYG{p}{[}\PYG{n+nv}{binary\PYGZhy{}str}\PYG{p}{]}
+\PYG{+w}{  }\PYG{p}{(}\PYG{k}{let }\PYG{p}{[}\PYG{n+nv}{parts}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nf}{bins/split\PYGZhy{}binary}\PYG{+w}{ }\PYG{n+nv}{binary\PYGZhy{}str}\PYG{p}{)}
+\PYG{+w}{        }\PYG{n+nv}{int\PYGZhy{}part}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nf}{bins/extend\PYGZhy{}left}\PYG{+w}{ }\PYG{p}{(}\PYG{l+s+ss}{:integer}\PYG{+w}{ }\PYG{n+nv}{parts}\PYG{p}{))}
+\PYG{+w}{        }\PYG{n+nv}{dec\PYGZhy{}part}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nf}{bins/extend\PYGZhy{}right}\PYG{+w}{ }\PYG{p}{(}\PYG{l+s+ss}{:decimal}\PYG{+w}{ }\PYG{n+nv}{parts}\PYG{p}{))]}
+\PYG{+w}{    }\PYG{p}{(}\PYG{n+nf}{str}
+\PYG{+w}{     }\PYG{p}{(}\PYG{n+nf}{build\PYGZhy{}hex}\PYG{+w}{ }\PYG{n+nv}{int\PYGZhy{}part}\PYG{+w}{ }\PYG{p}{[])}
+\PYG{+w}{     }\PYG{l+s}{\PYGZdq{}.\PYGZdq{}}
+\PYG{+w}{     }\PYG{p}{(}\PYG{n+nf}{build\PYGZhy{}hex}\PYG{+w}{ }\PYG{n+nv}{dec\PYGZhy{}part}\PYG{+w}{ }\PYG{p}{[]))))}
+\end{Verbatim}
